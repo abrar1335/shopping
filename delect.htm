@@ -1,0 +1,717 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  /* shop section */
+.shop{
+    width: 100%;
+}
+.shop .heading {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.shop .cards{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height:auto;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shop .cards .card{
+    position: relative;
+    margin:10px;
+    width:300px;
+    height: 400px;
+    /* border: 1px solid #000; */
+}
+.shop .cards .card .size{
+    position: absolute;
+    background-color:#e9ecef;
+    width: 100%;
+     display:none;/*for hover */
+    justify-content: space-around;
+    text-align: center;
+    /* border: 1px solid #FAC921; */
+    opacity: 0;
+    z-index: 1;
+    transition:.3s  linear;
+}
+
+.shop .cards .card:hover .size{
+    display: flex;
+    opacity: 1;
+}
+
+.shop .cards .card .size a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30px;
+    height:30px;
+    border: 1px solid #FAC921;
+}
+.shop .cards .top , .bottom{
+    width:100%;
+    height:50%;
+    /* border: 1px solid #000; */
+}
+.shop .cards .card .top img{
+    width:100%;
+    height:100%;
+    border-top-right-radius:4px ;
+}
+
+.shop .cards .card .top img:hover{
+   filter: contrast(80%);
+}
+
+.shop .cards .card .bottom h1{
+    font-size: 25px;
+    font-weight:400;
+    color: #000;
+}
+
+.shop .cards .card .bottom h1{
+    font-size: 25px;
+    font-weight:400;
+    color: #000;
+}
+
+.shop .cards .card .bottom p{
+    font-size: 16px;
+    font-weight:300;
+    color:#6c757d;
+}
+.shop .cards .card .bottom p span{
+    font-size: 18px;
+    font-weight:400;
+    color: #000;
+}
+
+.shop .cards .card .bottom p span:hover{
+    color:#6c757d;
+}
+.shop .cards .card .bottom  a {
+    color:#fff;
+}
+.shop .cards .card .bottom  .discount {
+    position: absolute;
+    right: 5px;
+    bottom: 52px;
+    
+}
+
+.ui-btn {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 10px 10px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: .3s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #FAC921;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  margin: 0 0 5px 5px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  /* --font-family: Menlo,Roboto Mono,monospace; */
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+
+
+
+.shop .cards .card .bottom .rate{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+} 
+
+.shop .cards .card .bottom .rate .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(255, 255, 255);
+    background:rgb(38, 126, 62);
+    width: 50px;
+    height: 25px;
+    border-radius: 0px 3px 3px 0px;  
+    font-size: 20px;
+    border-radius: 5px;
+} 
+.shop .cards .card .bottom svg{
+    width: 10px;
+} 
+
+
+.tranding {
+    width: 100%;
+    height: 200px;
+    height: auto;
+    /* background-color: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* color: #fff; */
+}
+
+.tranding .img{
+    width: 100%;
+    height:350px;
+    background-image: url('./img/hero4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+
+
+}
+</style>
+<body>
+    <section class="shop">
+        <div class="heading">
+          <marquee behavior="smooth" direction="">Top Deal On Fashion</marquee>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f1.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1>Shirt</h1></a>
+              <p><span>Product Name :-</span>Jungle half sleeve printed shirt for men</p>
+              <p class="price"><span>price :-</span>₹255</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f2.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1>Shirt</h1></a>
+              <p><span>Product Name :-</span>Tropical Paradise Inspired Printed Goa Beach Shirt</h1></p>
+              <p class="price"><span>price :-</span>₹230</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f3.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1>Shirt</h1></a>
+              <p><span>Product Name :-</span>Men Regular Fit Printed Casual Shirt</p>
+              <p class="price"><span>price :-</span>₹200</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href="#"><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f4.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1> Women-Shirt</h1></a>
+              <p><span>Product Name :-</span>Casual 3/4 Sleeve Printed men White, Pink</p>
+              <p class="price"><span>price :-</span>₹260</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f5.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1> Women-Shirt</h1></a>
+              <p><span>Product Name :-</span>Geometric Print Roll-Up Sleeves Cotton Shirt Style Top</p>
+              <p class="price"><span>price :-</span>₹220</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f6.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1>Shirt</h1></a>
+              <p><span>Product Name :-</span>ABSTRACT GEOMETRIC PRINT SHIRT</p>
+              <p class="price"><span>price :-</span>₹199</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f7.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1> Women-Trouser</h1></a>
+              <p><span>Product Name :-</span>Women gray Relaxed Straight Fit Low-Rise Trousers</p>
+              <p class="price"><span>price :-</span>₹250</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f8.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1> Women-Tops</h1></a>
+              <p><span>Product Name :-</span>Casual Puff Sleeves Self Design Women </p>
+              <p class="price"><span>price :-</span>₹299</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="Size">
+              <p><span>Size :-</span></p>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XL</a>
+              <a href="#">XXL</a>
+            </div>
+            <div class="top">
+              <img src="./img/products/f9.jpg" alt="">
+            </div>
+            <div class="bottom">
+              <a href="#"><h1> Women-Tops</h1></a>
+              <p><span>Product Name :-</span>Jungle half sleeve printed shirt for men</p>
+              <p class="price"><span>price :-</span>₹270</p>
+              <div class="discount" style="color: green; font-size: 18px;" >
+                <p><spa style="color: green; font-size: 18px;"n>UP TO : </span>30% off</p>
+              </div>
+              <a href=""><button class="ui-btn">
+                <span>
+                  Buy Now!
+                </span></a>
+              </button>
+              <div class="rate">
+                <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                  height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img" class="sc-rbbb40-0 ffadyU">
+                  <title>star-fill</title>
+                  <path
+                      d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                  </path>
+              </svg></p>
+              </div>
+            </div>
+          </div>
+       </section>
+
+
+  <script>
+    // function fetchResults(query) {
+//     return fetch(`https://api.example.com/search?q=${query}`)
+//         .then(response => response.json())
+//         .then(data => data.results);
+// }
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const search = document.getElementById('search');
+//     const btn = document.getElementById('btn');
+
+//     // Sample data to simulate API response
+//     const sampleData = [
+//         { id: 1, name: 'Alice' },
+//         { id: 2, name: 'Bob' },
+//         { id: 3, name: 'Charlie' },
+//         { id: 4, name: 'David' },
+//         { id: 5, name: 'Eve' },
+//     ];
+
+//     // Function to fetch search results
+//     function fetchResults(query) {
+//         return new Promise((resolve) => {
+//             // Simulating API call with a delay
+//             setTimeout(() => {
+//                 const results = sampleData.filter(item =>
+//                     item.name.toLowerCase().includes(query.toLowerCase())
+//                 );
+//                 resolve(results);
+//             }, 500);
+//         });
+//     }
+
+//     // Function to display results
+//     function displayResults(results) {
+//         btn.innerHTML = '';
+//         if (results.length === 0) {
+//             btn.innerHTML = '<p>No results found</p>';
+//             return;
+//         }
+//         results.forEach(result => {
+//             const div = document.createElement('div');
+//             div.classList.add('result-item');
+//             div.textContent = result.name;
+//             btn.appendChild(div);
+//         });
+//     }
+
+//     // Event listener for search input
+//     search.addEventListener('input', async (e) => {
+//         const query = e.target.value;
+//         if (query.length === 0) {
+//             btn.innerHTML = '';
+//             return;
+//         }
+//         const results = await fetchResults(query);
+//         displayResults(results);
+//     });
+// });
+
+  </script>
+</body>
+</html>
